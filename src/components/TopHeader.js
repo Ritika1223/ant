@@ -11,7 +11,7 @@ export default function TopHeader() {
   };
 
   return (
-    <div className="bg-white border-b text-sm font-medium text-gray-700 relative">
+    <div className="bg-white border-b text-sm font-medium text-gray-500 relative">
       <div className="container mx-auto flex justify-between items-center px-4 py-2">
         {/* Left side location & toll-free */}
         <div className="flex items-center gap-4 flex-grow md:ml-auto">
