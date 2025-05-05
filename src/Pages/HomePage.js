@@ -59,7 +59,7 @@ export default function HomePage() {
         </h1>
 
         {/* Description */}
-        <p className="text-xs sm:text-base text-black/90 font-medium max-w-md sm:max-w-xl">
+        <p className="text-sm sm:text-base text-black/90 font-medium max-w-md sm:max-w-3xl">
           India's Most Trusted Bus Rental Platform for Businesses. Hassle-Free, Long-Term Staff Transport Contracts, Outstation, Events, and More!
           <br />
           <span className="text-orange-600 font-semibold">

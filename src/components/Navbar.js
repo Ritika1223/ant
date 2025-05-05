@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Menu, X } from 'lucide-react'; // Import the icons
-
+import { Menu, X } from "lucide-react"; // Import the icons
 import { Link } from "react-router-dom"; // For navigation
-
+import { Bus, Ticket, Globe } from "lucide-react"; // Import different icons
 
 function Navbar({ setShowEnquiry }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,36 +16,32 @@ function Navbar({ setShowEnquiry }) {
       <img
         src="assets/logo2.png"
         alt="ANT Logo"
-        className="h-12 sm:h-10  object-contain select-none"
+        className="h-12 sm:h-10 object-contain select-none"
         draggable="false"
       />
 
       {/* Desktop Nav */}
-      <nav className="hidden md:flex gap-6 ml-8">
-        {["Bus Hire", "Bus Ticket", "Bus Tour"].map((item) => (
+      <nav className="hidden md:flex gap-8 ml-8">
+        {[
+          { name: "Bus Hire", icon: <Bus size={20} /> },
+          { name: "Bus Ticket", icon: <Ticket size={20} /> },
+          { name: "Bus Tour", icon: <Globe size={20} /> }
+        ].map((item) => (
           <button
-            key={item}
+            key={item.name}
             onClick={handleEnquiryOpen}
-            className="text-gray-700 hover:text-blue-600 font-medium"
+            className="text-black-700 hover:text-blue-600 font-medium text-lg flex items-center gap-2"
           >
-            {item}
+            {item.icon}
+            {item.name}
           </button>
-          
         ))}
-        
-        {/* Contact Us Button */}
-        <Link to="/contact-us">
-          <button className="text-gray-700 hover:text-blue-600 font-medium">
-            Contact Us
-          </button>
-        </Link>
-      
       </nav>
 
       {/* Enquiry Button */}
       <button
         onClick={handleEnquiryOpen}
-        className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-1 px-3 rounded-full shadow ml-auto md:ml-4"
+        className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-1 px-4 rounded-full shadow ml-auto md:ml-4"
       >
         Send Enquiry
       </button>
@@ -62,20 +57,20 @@ function Navbar({ setShowEnquiry }) {
       {/* Mobile Sidebar */}
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-md flex flex-col px-4 py-2 md:hidden z-30">
-          {["Bus Hire", "Bus Ticket", "Bus Tour"].map((item) => (
+          {[
+            { name: "Bus Hire", icon: <Bus size={20} /> },
+            { name: "Bus Ticket", icon: <Ticket size={20} /> },
+            { name: "Bus Tour", icon: <Globe size={20} /> }
+          ].map((item) => (
             <button
-              key={item}
+              key={item.name}
               onClick={handleEnquiryOpen}
-              className="text-gray-700 hover:text-blue-600 py-2 text-left border-b"
+              className="text-gray-700 hover:text-blue-600 py-2 text-left border-b flex items-center gap-2"
             >
-              {item}
+              {item.icon}
+              {item.name}
             </button>
           ))}
-           <Link to="/contact-us">
-            <button className="text-gray-700 hover:text-blue-600 py-2 text-left border-b">
-              Contact Us
-            </button>
-          </Link>
         </div>
       )}
     </header>
