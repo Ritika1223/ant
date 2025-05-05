@@ -13,11 +13,11 @@ function Navbar({ setShowEnquiry }) {
   };
 
   return (
-    <header className="w-full px-4 py-2 flex justify-between items-center z-20 relative bg-white shadow">
+    <header className="w-full px-4 py-1 flex justify-between h-20 items-center z-20 relative bg-white shadow">
       <img
         src="assets/logo2.png"
         alt="ANT Logo"
-        className="h-12 sm:h-16 object-contain select-none"
+        className="h-12 sm:h-10  object-contain select-none"
         draggable="false"
       />
 

@@ -46,9 +46,11 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Coming Soon Label */}
-        <div className="bg-orange-600 text-white font-bold text-sm sm:text-base px-4 py-1 rounded mb-2">
-          Coming Soon!
+       {/* Updated Coming Soon Label */}
+       <div className="bg-[#FF5722] px-3 sm:px-5 md:px-8 py-1.5 sm:py-2 md:py-2.5 rounded-lg mt-4 mb-2 shadow-lg w-fit mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white text-center leading-tight">
+            Coming Soon!
+          </h2>
         </div>
 
         {/* Title */}
